@@ -10,7 +10,7 @@ sealed class LoginState{
 }
 
 class LoginViewModel: ViewModel() {
-val stateLiveData = MutableLiveData<LoginState>()
+    val stateLiveData = MutableLiveData<LoginState>()
     fun login(username: String, password: String){
         if(validLogin(username, password)){
             stateLiveData.value = LoginState.Success
